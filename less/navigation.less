@@ -8,13 +8,23 @@
     border-bottom: 2px dashed @navigation-border;
     width: 100%;
 
-    h1 {
-
+    @media @mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: space-evenly;
     }
+
     nav {
         width: 40%;
         display: flex;
         justify-content: space-between;
+
+        @media @mobile {
+            width: 100%;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
     }
     a{
         text-decoration: none;
