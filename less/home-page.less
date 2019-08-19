@@ -1,40 +1,96 @@
 .home {
 
+  @media @mobile {
+    margin: 10px;
+}
+
+  header {
+    
+    .text-content {
+      margin: 30px 0;
+      border-bottom: 2px dashed @navigation-border;
+      padding-bottom: 20px;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
 
+      @media @mobile {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+  }
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+        @media @mobile {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+      }
+
       img {
         border-radius: 10px;
       }
-    }
+      }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        order: 1;
+    }
+
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+      
+
+      img {
+        border-radius: 10px;
+        @media @mobile {
+        margin-bottom: 10px;
+      }
+
+      }
     }
   }
 
@@ -53,9 +109,32 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
     }
+
+      .btn {
+        .displayFlex(center, center, 10px);
+        background-color: @eastern-blue;
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 20px 15px;
+        margin-top: 20px;
+        color: white;
+        
+      }
+    }
+   
   }
-}// home
+}
